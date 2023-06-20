@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Filmes</title>
+
+    <!-- css bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- meu css -->
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    <!-- favicon -->
+    <link href="../imagens/movies_icon.png" rel="icon" type="images/png" />
+  </head>
+  <body data-bs-theme="dark">
+    <!-- header -->
+    <header th:include="modulos/header :: header"></header>
+
+    <!-- main -->
+    <main>
+      <!-- carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide mb-5 borda-inferior" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/carousel-01.jpg" class="d-block w-100" alt="Diretor.">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/carousel-02.jpg" class="d-block w-100" alt="Claquete.">
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/carousel-03.jpg" class="d-block w-100" alt="Sala de cinema.">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- container -->
+      <div class="container">
+        <h1>Spring Filmes</h1>
+        <hr />
+
+        <!-- cards -->
+        <div class="row mt-5">
+          <!-- card 1 -->
+          <div class="col-12 col-md-3">
+            <div class="card border-dark mb-3">
+              <div class="card-header">CRUD Create</div>
+              <div class="card-body">
+                <h5 class="card-title">Cadastro de filmes</h5>
+                <p class="card-text">Parte do CRUD que insere o registro de um filme na base de dados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-12 col-md-3">
+            <div class="card border-dark mb-3">
+              <div class="card-header">CRUD Read</div>
+              <div class="card-body">
+                <h5 class="card-title">Leitura de filmes</h5>
+                <p class="card-text">Parte do CRUD que mostra os registros dos filmes da base de dados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+          <div class="col-12 col-md-3">
+            <div class="card border-dark mb-3">
+              <div class="card-header">CRUD Update</div>
+              <div class="card-body">
+                <h5 class="card-title">Atualização de filmes</h5>
+                <p class="card-text">Parte do CRUD que atualiza o registro de um filme da base de dados.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 4 -->
+          <div class="col-12 col-md-3">
+            <div class="card border-dark mb-3">
+              <div class="card-header">CRUD Delete</div>
+              <div class="card-body">
+                <h5 class="card-title">Exclusão de filmes</h5>
+                <p class="card-text">Parte do CRUD que exclui um registro de um filme da base de dados.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- fim do container -->
+
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer th:replace="modulos/footer :: footer"></footer>
+    
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  </body>
+</html>
