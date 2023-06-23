@@ -34,6 +34,20 @@
                     <p><b>Duração: </b><span th:text="${filme.duracao}"></span></p>
                     <p><b>Produtora: </b><span th:text="${filme.produtora}"></span></p>
                     <p><b>Distribuidora: </b><span th:text="${filme.distribuidora}"></span></p>
+
+                    <!-- botões de alterar e excluir -->
+                    <div class="row mb-5">
+                      <!-- botão alterar -->
+                      <div class="col-4">
+                        <a class="btn btn-primary" th:href="${(#mvc.url('FC#formAlterarFilme').arg(0, filme.codigoFilme).build())}" role="button">Alterar</a>
+                      </div>
+                      
+                      <!-- botão excluir -->
+                      <div class="col-4">
+                        <a class="btn btn-danger" th:href="${(#mvc.url('FC#excluirFilme').arg(0, filme.codigoFilme)).build()}" role="button">Excluir</a>
+                      </div>
+
+                    </div>
                 </div>
             </div>
         </div>
